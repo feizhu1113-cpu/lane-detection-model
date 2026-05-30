@@ -31,7 +31,10 @@
 ### 安装依赖
 ```bash
 pip install -r requirements.txt
+```
 
+### 运行方式
+```bash
 # 测试模型
 python models/lane_classifier.py
 
@@ -40,7 +43,10 @@ python utils/roi.py
 
 # 训练模型（需先下载数据集）
 python train.py
+```
 
+## 项目结构
+```
 ├── train.py              # 训练脚本
 ├── dataset.py            # 数据加载类
 ├── models/
@@ -50,3 +56,8 @@ python train.py
 ├── confusion_matrix.png  # 混淆矩阵
 ├── training_curves.png   # 训练曲线
 └── bad_cases.png         # 失败案例分析
+```
+
+## 后续优化方向
+- 引入时序信息（相邻帧）提升稳定性
+- 部署到嵌入式设备（如Jetson Nano）
